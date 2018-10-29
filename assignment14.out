@@ -1,0 +1,1114 @@
+  ********************************************************************************
+  *                                                                              *
+  *                                IMEX  2014.10                                 *
+  *                   Adaptive - Implicit Black Oil Simulator                    *
+  *                         General Release for Win x64                          *
+  *                            2014-Oct-21   14:52:09                            *
+  *                                                                              *
+  *                          (c) Copyright 1977 - 2014                           *
+  *                Computer Modelling Group Ltd., Calgary, Canada                *
+  *                             All Rights Reserved                              *
+  *                                                                              *
+  ********************************************************************************
+
+
+  Command-line Arguments:  -dimsum
+                           -wd \\austin.utexas.edu\disk\engrstu\facstaff\jf28456\Documents
+                           -log
+                           -f \\austin.utexas.edu\disk\engrstu\facstaff\jf28456\Documents\test_problem.dat
+
+  Date and Time of Start of Run:  Oct 19, 2017  09:15:19
+
+
+     IMEX is using the following common block maximums:
+
+     Grid Blocks        =         100          Wells                =    1
+     Total well layers  =           1          Constraints per well =    3
+     Orthogonalizations =          -2          Table Entries        =   51
+ 
+ ===================== SUMMARY (from subroutine: INDYNM) ======================
+  Dimensioning scanning of data is complete.
+  Simulation will stop if there were error messages.
+     0 Warning messages.    0 Error messages.
+ ==============================================================================
+ 
+ 
+ ** 2017-10-18, 2:47:12 PM, jf28456
+ ** 2017-10-18, 2:47:33 PM, jf28456
+ RESULTS SIMULATOR IMEX 201401
+ 
+
+
+     Beginning data file reading and echo . . .
+ INUNIT FIELD
+ WSRF WELL 1
+ WSRF GRID TIME
+ WSRF SECTOR TIME
+ OUTSRF WELL LAYER NONE
+ OUTSRF RES ALL
+ OUTSRF GRID SO SG SW PRES OILPOT BPP SSPRES WINFLUX
+
+ ===================== WARNING (from subroutine: INIORD) ======================
+  Solvent property related printout is being disabled
+  This MODEL option does not allow solvent property output.
+  Line: 12   File Name: \\austin.utexas.edu\disk\engrstu\facstaff\jf28456\Docume
+ ==============================================================================
+
+ WPRN GRID 0
+ OUTPRN GRID NONE
+ OUTPRN RES NONE
+ **  Distance units: ft
+ RESULTS XOFFSET           0.0000
+ RESULTS YOFFSET           0.0000
+ RESULTS ROTATION           0.0000  **  (DEGREES)
+ RESULTS AXES-DIRECTIONS 1.0 -1.0 1.0
+ ** ***************************************************************************
+ ** Definition of fundamental cartesian grid
+ ** ***************************************************************************
+ GRID VARI 5 1 1
+ KDIR DOWN
+ DI IVAR
+  1 2000 3000 1500 3500
+ DJ JVAR
+  2500
+ DK ALL
+  5*80
+ DTOP
+  5*1000
+ PERMI         20000  10 100 50 20
+ **  0 = null block, 1 = active block
+ NULL CON            1
+ POR CON          0.2
+ PERMJ EQUALSI
+ PERMK EQUALSI
+ **  0 = pinched block, 1 = active block
+ PINCHOUTARRAY CON            1
+ CPOR 1E-20
+ MODEL BLACKOIL
+ TRES 241
+ PVT EG 1
+ 
+ **         p        Rs        Bo        Eg      viso       visg
+        14.696   7.40687   1.09333   4.19006    1.0908   0.011303
+       80.3829    23.801   1.10277   23.2155   1.00973  0.0113876
+        146.07   42.5776   1.11371   42.7421  0.935084  0.0115016
+       211.757   62.9231   1.12574   62.7917  0.869642   0.011637
+       277.444   84.4701   1.13866    83.386  0.812839  0.0117914
+       343.131   107.003   1.15235   104.547  0.763474  0.0119641
+       408.818   130.377   1.16675   126.297  0.720353  0.0121551
+       474.505    154.49   1.18179   148.655  0.682442  0.0123649
+       540.191   179.262   1.19744   171.642  0.648887   0.012594
+       605.878   204.631   1.21365   195.275   0.61899  0.0128435
+       671.565   230.548   1.23041   219.566  0.592188  0.0131144
+       737.252    256.97   1.24769   244.524  0.568022  0.0134079
+       802.939   283.863   1.26546   270.154  0.546117  0.0137255
+       868.626   311.197   1.28372   296.452  0.526164  0.0140683
+       934.313   338.946   1.30244   323.403  0.507908   0.014438
+          1000   367.086    1.3216   350.984  0.491135  0.0148358
+          1200   454.984   1.38259   438.396  0.447484  0.0162334
+          1400   545.881   1.44731    529.43  0.412362  0.0179283
+          1600   639.436   1.51551   621.281  0.383412  0.0199176
+          1800   735.385   1.58698   710.821  0.359082  0.0221649
+          2000   833.515   1.66155   795.472  0.338303  0.0246098
+ DENSITY OIL 51.4561
+ GRAVITY GAS 0.1
+ DENSITY WATER 62.4
+ CO 1e-6
+ BWI 1
+ CW 1E-6
+ REFPW 1000
+ VWI 1
+ CVW 0
+ PTYPE CON            1
+ ROCKFLUID
+ RPT 1
+ **        Sw       krw      krow
+ SWT
+             0         0         1
+        0.0625    0.0625    0.9375
+         0.125     0.125     0.875
+        0.1875    0.1875    0.8125
+          0.25      0.25      0.75
+        0.3125    0.3125    0.6875
+         0.375     0.375     0.625
+        0.4375    0.4375    0.5625
+           0.5       0.5       0.5
+        0.5625    0.5625    0.4375
+         0.625     0.625     0.375
+        0.6875    0.6875    0.3125
+          0.75      0.75      0.25
+        0.8125    0.8125    0.1875
+         0.875     0.875     0.125
+        0.9375    0.9375    0.0625
+             1         1         0
+ **        Sl       krg      krog
+ SLT
+             0         1         0
+        0.0625    0.9375    0.0625
+         0.125     0.875     0.125
+        0.1875    0.8125    0.1875
+          0.25      0.75      0.25
+        0.3125    0.6875    0.3125
+         0.375     0.625     0.375
+        0.4375    0.5625    0.4375
+           0.5       0.5       0.5
+        0.5625    0.4375    0.5625
+         0.625     0.375     0.625
+        0.6875    0.3125    0.6875
+          0.75      0.25      0.75
+        0.8125    0.1875    0.8125
+         0.875     0.125     0.875
+        0.9375    0.0625    0.9375
+             1         0         1
+ INITIAL
+ USER_INPUT
+ PRES CON         1000
+ PB CON            0
+ SO CON            0
+ SW CON            1
+ NUMERICAL
+ DTMAX 1.0000001
+ DTMIN 0.9999999
+ AIM OFF
+
+ ===================== SUMMARY (from subroutine: INDATA) ======================
+  Reading of initial data is complete.
+  Simulation will stop if there were error messages.
+     1 Warning messages.    0 Error messages.
+ ==============================================================================
+
+
+
+ RUN-TIME DIMENSIONER MESSAGES 
+===============================
+
+
+
+ For Minimum Dimensioned Model Use
+----------------------------------
+  *DIM *ACTIVE_BLOCKS            5
+
+
+   However, if a warning message appeared above 
+   stating inability to obtain accurate         
+   dimensioning information, use the following  
+   line in the datafile for a minimum           
+   dimensioned model                            
+
+
+  *DIM *ACTIVE_BLOCKS            5
+
+ Currently Dimensioned Model Uses 
+----------------------------------
+  *DIM *ACTIVE_BLOCKS            5
+1
+ RUN
+ DATE 1901 1 1
+ 
+ DTWELL 1
+ **
+
+ ================== INFORMATIONAL (from subroutine: WMWLIN) ===================
+  The well named "Well-1" is assigned the well number 1.
+   
+ ==============================================================================
+
+ WELL  'Well-1'
+ INJECTOR MOBWEIGHT 'Well-1'
+ INCOMP  WATER
+
+ ================== INFORMATIONAL (from subroutine: WMWTIN) ===================
+  Well no. 1 ('Well-1') is
+  being opened because *OPERATE was encountered for this well.
+ ==============================================================================
+
+ OPERATE  MAX  BHP  2000.0  CONT
+ **          rad  geofac  wfrac  skin
+ GEOMETRY  K  0.25  0.37  1.0  0.0
+ PERF  GEOA  'Well-1'
+ ** UBA     ff   Status  Connection
+     1 1 1  1.0  OPEN    FLOW-FROM  'SURFACE'
+ AIMSET CON            1
+
+ ===================== SUMMARY (from subroutine: INWELL) ======================
+  Reading of well data is complete.
+  Simulation will stop if there were error messages.
+     1 Warning messages.    0 Error messages.
+ ==============================================================================
+
+
+ ===================== WARNING (from subroutine: KROCHK) ======================
+  For block(s) of rock type=   1: Stone's 2 evaluates Kro(So=0) > 0.
+   e.g. Kro=0.5000E-04 at (Sw=0.1000E+00,Sg=1-Sw). Check Rock-Fluid data of the rock type.
+ ==============================================================================
+
+    Material in place including all subgrids, (o,w,g):     -65.360     STB     0.71250E+08 STB     -244.38     SCF
+    ----------------------------------------------
+        PARAMS_MOD parameters - Dimensioner output
+    ----------------------------------------------
+                                                  
+   ngspec =           105
+   ntbmxw =            12
+   ncmpmx =             9
+   nrespc =            65
+   nrfkey =            64
+   ntcolc =            10
+   mdjdts =            10
+    nrfmx =             1
+    nfltc =            15
+     naqf =             1
+    nscmx =             1
+    mbits =            30
+    nscms =             1
+    nllmx =             1
+    ngbmx =           150
+   nptype =             5
+   nrtype =             5
+   mdtbkr =           101
+    ntbmx =            51
+     neq1 =             3
+    mdneq =             3
+   ibfmx2 =             2
+   ntbmx2 =             2
+   ibfmxp =             2
+   ntbmxp =             2
+   jpctmx =             2
+   nstkmx =             2
+   nspecc =             1
+   jcmaxc =           121
+   mdcalp =            23
+    mdalp =            -1
+    mdald =            60
+    mdbet =            30
+   mdiclu =            28
+    mdsol =             7
+    mdjcm =            40
+    mdnor =            31
+   mdptcs =           100
+   mdptps =             5
+   mdptss =             5
+   mdptgn =             1
+   mdptcn =            10
+   mdleas =             1
+   mdwsdb =         20000
+   mdaqui =             1
+   mtabkr =          2001
+   nspec1 =             2
+   mdchys =            10
+   mdchyt =           200
+   mdctab =           100
+   mdctyp =             5
+   mddtyp =             1
+   mdijkp =             6
+   mdpdtp =             1
+   mdpts3 =            15
+   mdneq2 =             9
+   mdlevp =             2
+   mdclas =             3
+   mdscl1 =            -1
+   mdclsl =             1
+   mdijls =             7
+   mdpjcm =           120
+   mdprda =            64
+   mdprtc =           194
+   mdcls2 =             9
+   mdsolf =             2
+   mdcluf =             2
+   mdbetp =            44
+   mdcarb =             2
+   mdptcn_cpt  =             2
+   mdptcn_poly =             2
+   mdptps_api  =             2
+   mdptps_cpt  =             2
+   mdptps_rv   =             2
+   mdptss_frac =             2
+  mdptps_subsd =             2
+   mdptps_fc   =             2
+   mdptcn_fc   =             2
+   mdptps_drsdt=             2
+   mdptps_drvdt=             2
+     mdptps_ads=             2
+      mdptps_nd=             2
+   mdlayr_sgw  =             1
+                                                  
+    ----------------------------------------------
+                WM parameters - Dimensioner output
+    ----------------------------------------------
+                                                  
+   mdwell =             1
+   mdlayr =             1
+   mdly1w =             2
+   mdlypl =             1
+   mdgrup =             2
+   mdrgrp =             1
+   mdcons =             3
+   mdhyvl =             1
+   mdbhen =           100
+   mdhytb =             1
+   mdcygr =             1
+   mdcygp =             2
+   mdcygs =             2
+   mdgcms =            40
+   mdwcms =           400
+   mdclmp =             0
+   mdrlmp =             0
+  mdlyclmp              1
+  mdlyrlmp              1
+                                                  
+ 
+************ iSegWell Dimensioning parameters. ************
+ 
+ Parameter              value
+*********************************************
+ mdbran                    1
+ mdbrts                    1
+ mdenexpr                  1
+ mdenextp                  1
+ mdeqpmd                   1
+ mdeqpt                    1
+ mdorwb                    1
+ mdpfin                    1
+ mdpftb                    1
+ mdpftbop                  1
+ mdpnts                    1
+ mdptm                     1
+ mdptpmd                   1
+ mdptpmif                  1
+ mdpttp                    1
+ mdsyncscr                 1
+ mdtepm                    1
+ mdtepmif                  1
+ mdtopm                    1
+ mdtopmif                  1
+ mdtopn                    1
+ mdtopnrd                  1
+ mdtseqpmd                 1
+ mdtseqpt                  1
+ mdtsm                     1
+ mdtspmd                   1
+ mdtspt                    1
+ mdtube                    1
+ mdvirtpr                  1
+ mdvpac                    1
+ mdwbpdmif                 1
+ mdwbpmd                   1
+ mdwim                     1
+ mdwipmd                   1
+ mdwipmif                  1
+ mdwlst                    1
+ mdwpm                     1
+ mdbran_clmp               1
+ mdccmp                    1
+ mdclmpsg                  1
+ mdclpts                   1
+ mdconi                    1
+ mdconn                    1
+ mddfiftb                  1
+ mddfiftbln                1
+ mddhsp                    1
+ mddhspm                   1
+ mddhspmif                 1
+ mddhspts                  1
+ mddhsreg                  1
+ mddhstb                   1
+ mdeqstif                  1
+ mdeqstxif                 1
+ mdintclmpsg               1
+ mdintclmpsgpf             1
+ mdintrlmpsg               1
+ mdintrlmpsgpf             1
+ mdlnrpfintset             1
+ mdlnrpfset                1
+ mdnod2                    1
+ mdnods                    1
+ mdoinf                    1
+ mdpack                    1
+ mdpkin                    1
+ mdprif                    1
+ mdprsr                    1
+ mdrefjcttm                1
+ mdrlmpsg                  1
+ mdsclrmvln                1
+ mdsclrmvpf                1
+ mdsegs                    1
+ mdsegtyp                  1
+ mdsgeqst                  1
+ mdsgmon                   1
+ mdtshtmd                  1
+ mdtshtpt                  1
+ mdtsmonpts                1
+ mdtsrg                    1
+ mdtsrgif                  1
+ mdwbhtmd                  1
+ mdwbhtpt                  1
+ mdwbhttsif                1
+ mdwbhttsxf                1
+ mdwbmonpts                1
+ mdwltsg                   1
+ mdelem                    1
+ mdflcsg                   1
+ mdjcif                    1
+ mdjunc                    1
+ mdleng                    1
+ mdlink                    1
+ mdouif                    1
+ mdperf                    1
+ mdhtcp                    1
+                                                  
+1
+
+
+
+                   ****************************************************************************************************
+                   *                                PVT Functions (Region   1)                                        *
+                   *--------------------------------------------------------------------------------------------------*
+                   *   pressure    sol'n gas     oil fvf      gas fvf    gas exp   oil visc   gas visc     co         *
+                   *     psia       SCF/STB      rbb/STB      rbb/SCF    SCF/rbb      cp         cp        1/psi      *
+                   *                                                                                                  *
+                   *      14.696       7.407     1.09333     0.23866       4.190   1.091      1.1303E-02  1.0000E-06  *
+                   *      80.383      23.801     1.10277     0.04307      23.215   1.010      1.1388E-02  1.0000E-06  *
+                   *     146.070      42.578     1.11371     0.02340      42.742  0.9351      1.1502E-02  1.0000E-06  *
+                   *     211.757      62.923     1.12574     0.01593      62.792  0.8696      1.1637E-02  1.0000E-06  *
+                   *     277.444      84.470     1.13866     0.01199      83.386  0.8128      1.1791E-02  1.0000E-06  *
+                   *     343.131     107.003     1.15235     0.00957     104.547  0.7635      1.1964E-02  1.0000E-06  *
+                   *     408.818     130.377     1.16675     0.00792     126.297  0.7204      1.2155E-02  1.0000E-06  *
+                   *     474.505     154.490     1.18179     0.00673     148.655  0.6824      1.2365E-02  1.0000E-06  *
+                   *     540.191     179.262     1.19744     0.00583     171.642  0.6489      1.2594E-02  1.0000E-06  *
+                   *     605.878     204.631     1.21365     0.00512     195.275  0.6190      1.2844E-02  1.0000E-06  *
+                   *     671.565     230.548     1.23041     0.00455     219.566  0.5922      1.3114E-02  1.0000E-06  *
+                   *     737.252     256.970     1.24769     0.00409     244.524  0.5680      1.3408E-02  1.0000E-06  *
+                   *     802.939     283.863     1.26546     0.00370     270.154  0.5461      1.3725E-02  1.0000E-06  *
+                   *     868.626     311.197     1.28372     0.00337     296.452  0.5262      1.4068E-02  1.0000E-06  *
+                   *     934.313     338.946     1.30244     0.00309     323.403  0.5079      1.4438E-02  1.0000E-06  *
+                   *    1000.000     367.086     1.32160     0.00285     350.984  0.4911      1.4836E-02  1.0000E-06  *
+                   *    1200.000     454.984     1.38259     0.00228     438.396  0.4475      1.6233E-02  1.0000E-06  *
+                   *    1400.000     545.881     1.44731     0.00189     529.430  0.4124      1.7928E-02  1.0000E-06  *
+                   *    1600.000     639.436     1.51551     0.00161     621.281  0.3834      1.9918E-02  1.0000E-06  *
+                   *    1800.000     735.385     1.58698     0.00141     710.821  0.3591      2.2165E-02  1.0000E-06  *
+                   *    2000.000     833.515     1.66155     0.00126     795.472  0.3383      2.4610E-02  1.0000E-06  *
+                   ****************************************************************************************************
+1
+ 
+                   ***************************************************************************
+                   *              Water-Oil Saturation Functions (Rock Type   1)             *
+                   *-------------------------------------------------------------------------*
+                   *       SWT              KRW           KRNW          Drainage  Imbibition *
+                   *                                                      PCNW       PCNWI   *
+                   *                                                      psia       psia    *
+                   *     0.00000         0.00000         1.00000         0.00000    0.00000  *
+                   *     0.06250         0.06250         0.93750         0.00000    0.00000  *
+                   *     0.12500         0.12500         0.87500         0.00000    0.00000  *
+                   *     0.18750         0.18750         0.81250         0.00000    0.00000  *
+                   *     0.25000         0.25000         0.75000         0.00000    0.00000  *
+                   *     0.31250         0.31250         0.68750         0.00000    0.00000  *
+                   *     0.37500         0.37500         0.62500         0.00000    0.00000  *
+                   *     0.43750         0.43750         0.56250         0.00000    0.00000  *
+                   *     0.50000         0.50000         0.50000         0.00000    0.00000  *
+                   *     0.56250         0.56250         0.43750         0.00000    0.00000  *
+                   *     0.62500         0.62500         0.37500         0.00000    0.00000  *
+                   *     0.68750         0.68750         0.31250         0.00000    0.00000  *
+                   *     0.75000         0.75000         0.25000         0.00000    0.00000  *
+                   *     0.81250         0.81250         0.18750         0.00000    0.00000  *
+                   *     0.87500         0.87500         0.12500         0.00000    0.00000  *
+                   *     0.93750         0.93750         0.06250         0.00000    0.00000  *
+                   *     1.00000         1.00000         0.00000         0.00000    0.00000  *
+                   ***************************************************************************
+
+
+ 
+                   ***************************************************************************
+                   *         Gas-Liquid Saturation Functions (Rock Type   1)                 *
+                   *-------------------------------------------------------------------------*
+                   *       SLT              KRG           KRNG          Drainage  Imbibition *
+                   *                                                      PCNG       PCNGI   *
+                   *                                                      psia       psia    *
+                   *     0.00000         1.00000         0.00000         0.00000    0.00000  *
+                   *     0.06250         0.93750         0.06250         0.00000    0.00000  *
+                   *     0.12500         0.87500         0.12500         0.00000    0.00000  *
+                   *     0.18750         0.81250         0.18750         0.00000    0.00000  *
+                   *     0.25000         0.75000         0.25000         0.00000    0.00000  *
+                   *     0.31250         0.68750         0.31250         0.00000    0.00000  *
+                   *     0.37500         0.62500         0.37500         0.00000    0.00000  *
+                   *     0.43750         0.56250         0.43750         0.00000    0.00000  *
+                   *     0.50000         0.50000         0.50000         0.00000    0.00000  *
+                   *     0.56250         0.43750         0.56250         0.00000    0.00000  *
+                   *     0.62500         0.37500         0.62500         0.00000    0.00000  *
+                   *     0.68750         0.31250         0.68750         0.00000    0.00000  *
+                   *     0.75000         0.25000         0.75000         0.00000    0.00000  *
+                   *     0.81250         0.18750         0.81250         0.00000    0.00000  *
+                   *     0.87500         0.12500         0.87500         0.00000    0.00000  *
+                   *     0.93750         0.06250         0.93750         0.00000    0.00000  *
+                   *     1.00000         0.00000         1.00000         0.00000    0.00000  *
+                   ***************************************************************************
+
+
+1
+
+                                                       *************************
+                                                       * SIMULATION PARAMETERS *
+                                                       *************************
+
+
+
+                                     Number of grid blocks in x direction:            5
+                                     Number of grid blocks in y direction:            1
+                                     Number of grid blocks in z direction:            1
+                                     Total number of grid blocks:                     5
+
+                                     Number of equations:                             3
+                                     Number of orthogonalizations:                   30
+                                     Maximum number of Newton iterations:            10
+
+                                               PVT REGION  1
+                                               **************
+
+                                     Oil density at stock tank conditions:       51.45610  lbm/ ft 3
+                                     Gas density at standard conditions:          0.00763  lbm/ ft 3
+                                     Oil Viscosity Pressure Derivative:       0.00000E+00    cp /psi
+                                     Water density at stock tank conditions:     62.40000  lbm/ ft 3
+                                     Water Formation Vol. Factor:                 1.00000   m3/m3, RB/STB or cm3/cm3
+                                     Water Compressibility:                   0.10000E-05   1/psi
+                                     Water reference Pressure *REFPW:          1000.00000   psia
+                                     Water Viscosity at *REFPW:                   1.00000    cp 
+                                     Water Viscosity Pressure Derivative:     0.00000E+00    cp /psi
+
+                                     Rock compressibility:                     0.0000      1/psi
+1
+ ***********************************************************************************************************************************
+ TIME: 0.0000 days                              I M E X   S E C T O R   S U M M A R Y                             DATE: 1901:01:01  
+ ***********************************************************************************************************************************
+ ===================================================================================================================================
+ 
+                                SECTOR-0                                                                                            
+                                Entire                                                                                              
+                                 Field                                                                                              
+   Total Pore Volume.  M rbbl    71250                                                                                              
+   HC. Pore Volume     M rbbl  -.07125                                                                                              
+ Fluids in Place
+   Total Gas          MM SCF   -244e-6                                                                                              
+   Free Gas           MM SCF                                                                                                        
+   Water               M STB     71250                                                                                              
+   Reservoir Gas       M rbbl                                                                                                       
+   Reservoir Water     M rbbl    71250                                                                                              
+ Average Pressure 
+   Total Pore Volume  psia      1000.0                                                                                              
+   HC. Pore Volume    psia      -11328                                                                                              
+ Average P/Z 
+   Total Pore Volume  psia      1238.6                                                                                              
+   HC. Pore Volume    psia      -14031                                                                                              
+ Average Saturation %
+   Gas                                                                                                                              
+   Water                        100.00                                                                                              
+ Percentage Recovery 
+   Total Gas                                                                                                                        
+   Water                                                                                                                            
+ Cumulative Injection 
+   Gas             MM SCF                                                                                                           
+   Water            M STB                                                                                                           
+ Cumulative Production 
+   Gas             MM SCF                                                                                                           
+   Water            M STB                                                                                                           
+ Injection Rate 
+   Gas             MM SCF/days                                                                                                      
+   Water            M STB/days                                                                                                      
+ Production Rate 
+   Gas             MM SCF/days                                                                                                      
+   Water            M STB/days                                                                                                      
+ 
+
+                            I M E X   T I M E   S T E P   S U M M A R Y                                                             
+ =================================================================================================                                  
+   Time Step          Time          Total Production      Total Injection  Total Max. Max. Change                                   
+ -------------- ---------------- ----------------------- -----------------  PV   Mat. ------------                                  
+              C                    Gas     Water    WGR    Gas     Water   Avg.  bal. Satur. Pres.                                  
+      Size    U                                    STB/                    Pres. err. DSMAX  DPMAX                                  
+ No.  Days IT T Days   yy:mm:dd   MCF/D    STB/D   MSCF   MCF/D    STB/D   psia   %          psia                                   
+ ---- ---- -- - ----- ---------- -------- -------- ----- -------- -------- ----- ---- ------ -----                                  
+   1w 1.00 2  0 1.000 1901:01:02                                  1983.323  1028 e-9w  e-10g   999                                  
+1
+ ***********************************************************************************************************************************
+ TIME: 1.0000 days                              I M E X   S E C T O R   S U M M A R Y                             DATE: 1901:01:02  
+ ***********************************************************************************************************************************
+ ===================================================================================================================================
+ 
+                                SECTOR-0                                                                                            
+                                Entire                                                                                              
+                                 Field                                                                                              
+   Total Pore Volume.  M rbbl    71250                                                                                              
+   HC. Pore Volume     M rbbl  -.07125                                                                                              
+ Fluids in Place
+   Total Gas          MM SCF   -244e-6                                                                                              
+   Free Gas           MM SCF                                                                                                        
+   Water               M STB     71252                                                                                              
+   Reservoir Gas       M rbbl                                                                                                       
+   Reservoir Water     M rbbl    71250                                                                                              
+ Average Pressure 
+   Total Pore Volume  psia      1027.8                                                                                              
+   HC. Pore Volume    psia      -11643                                                                                              
+ Average P/Z 
+   Total Pore Volume  psia      1281.6                                                                                              
+   HC. Pore Volume    psia      -14518                                                                                              
+ Average Saturation %
+   Gas                                                                                                                              
+   Water                        100.00                                                                                              
+ Percentage Recovery 
+   Total Gas                                                                                                                        
+   Water                       -.00278                                                                                              
+ Cumulative Injection 
+   Gas             MM SCF                                                                                                           
+   Water            M STB       1.9833                                                                                              
+ Cumulative Production 
+   Gas             MM SCF                                                                                                           
+   Water            M STB                                                                                                           
+ Injection Rate 
+   Gas             MM SCF/days                                                                                                      
+   Water            M STB/days  1.9833                                                                                              
+ Production Rate 
+   Gas             MM SCF/days                                                                                                      
+   Water            M STB/days                                                                                                      
+ 
+
+
+
+ 
+ ***********************************************************************************************************************************
+ TIME:  1.0000 days                              I M E X   F I E L D  S U M M A R Y                               DATE: 1901:JAN:02 
+ ***********************************************************************************************************************************
+ ===================================================================================================================================
+                                 +                     ++                     +
+                                 +         WELL        ++   TOTAL FOR GROUP   +
+                                 +---------------------++---------------------+
+                                 + No.       Name      ++ No.       Name      +
+                                 +---- ----------------++---- ----------------+
+                                 +   1      Well-1     ++   1       Field     +
+ --------------------------------+---------------------++---------------------+
+ Well parameters                 +                     ++                     +
+   Well Type                     +  Mob Wtd Water Inj  ++                     +
+   Status                        +          BHP        ++                     +
+   On-time fraction              +          1.0        ++                     +
+   Cumulative Open days          +          1          ++          1          +
+ Well Pressures                  +                     ++                     +
+   Bottom Hole     psia          +         2000        ++                     +
+   Grid Block      psia          +        1998.7       ++                     +
+   Drawdown        psia          +        1.2667       ++                     +
+   Ref Layer Head  psia          +          0          ++                     +
+   Tubing Head     psia          +                     ++                     +
+ Mobility Weighted Pressures     +                     ++                     +
+   P-P(0)          psia          +        998.73       ++                     +
+   Block Pressure  psia          +        1998.7       ++                     +
+   Datum Pressure  psia          +        1998.7       ++                     +
+ Inst Surface Injection Rates    +                     ++                     +
+   Oil             STB/day       +          0          ++          0          +
+   Water           STB/day       +        1983.3       ++        1983.3       +
+   Gas             MSCF/day      +          0          ++          0          +
+ Surface cumulative injection    +                     ++                     +
+   Well Open Time  days          +          1          ++          1          +
+   Oil             MSTB          +          0          ++          0          +
+   Water           MSTB          +        1.9833       ++        1.9833       +
+   Gas             MMSCF         +          0          ++          0          +
+ ===================================================================================================================================
+ ===================================================================================================================================
+1
+ DATE 1901 1  2.00000
+
+ ===================== SUMMARY (from subroutine: INWELL) ======================
+  Reading of well data is complete.
+  Simulation will stop if there were error messages.
+     2 Warning messages.    0 Error messages.
+ ==============================================================================
+
+
+                            I M E X   T I M E   S T E P   S U M M A R Y                                                             
+ =================================================================================================                                  
+   Time Step          Time          Total Production      Total Injection  Total Max. Max. Change                                   
+ -------------- ---------------- ----------------------- -----------------  PV   Mat. ------------                                  
+              C                    Gas     Water    WGR    Gas     Water   Avg.  bal. Satur. Pres.                                  
+      Size    U                                    STB/                    Pres. err. DSMAX  DPMAX                                  
+ No.  Days IT T Days   yy:mm:dd   MCF/D    STB/D   MSCF   MCF/D    STB/D   psia   %          psia                                   
+ ---- ---- -- - ----- ---------- -------- -------- ----- -------- -------- ----- ---- ------ -----                                  
+   2w 1.00 1  0 2.000 1901:01:03                                  1759.144  1053 e-7w  e-11g  96.3                                  
+1
+ ***********************************************************************************************************************************
+ TIME: 2.0000 days                              I M E X   S E C T O R   S U M M A R Y                             DATE: 1901:01:03  
+ ***********************************************************************************************************************************
+ ===================================================================================================================================
+ 
+                                SECTOR-0                                                                                            
+                                Entire                                                                                              
+                                 Field                                                                                              
+   Total Pore Volume.  M rbbl    71250                                                                                              
+   HC. Pore Volume     M rbbl  -.07125                                                                                              
+ Fluids in Place
+   Total Gas          MM SCF   -244e-6                                                                                              
+   Free Gas           MM SCF                                                                                                        
+   Water               M STB     71254                                                                                              
+   Reservoir Gas       M rbbl                                                                                                       
+   Reservoir Water     M rbbl    71250                                                                                              
+ Average Pressure 
+   Total Pore Volume  psia      1052.5                                                                                              
+   HC. Pore Volume    psia      -11923                                                                                              
+ Average P/Z 
+   Total Pore Volume  psia      1319.9                                                                                              
+   HC. Pore Volume    psia      -14952                                                                                              
+ Average Saturation %
+   Gas                                                                                                                              
+   Water                        100.00                                                                                              
+ Percentage Recovery 
+   Total Gas                                                                                                                        
+   Water                       -.00525                                                                                              
+ Cumulative Injection 
+   Gas             MM SCF                                                                                                           
+   Water            M STB       3.7425                                                                                              
+ Cumulative Production 
+   Gas             MM SCF                                                                                                           
+   Water            M STB                                                                                                           
+ Injection Rate 
+   Gas             MM SCF/days                                                                                                      
+   Water            M STB/days  1.7591                                                                                              
+ Production Rate 
+   Gas             MM SCF/days                                                                                                      
+   Water            M STB/days                                                                                                      
+ 
+
+
+
+ 
+ ***********************************************************************************************************************************
+ TIME:  2.0000 days                              I M E X   F I E L D  S U M M A R Y                               DATE: 1901:JAN:03 
+ ***********************************************************************************************************************************
+ ===================================================================================================================================
+                                 +                     ++                     +
+                                 +         WELL        ++   TOTAL FOR GROUP   +
+                                 +---------------------++---------------------+
+                                 + No.       Name      ++ No.       Name      +
+                                 +---- ----------------++---- ----------------+
+                                 +   1      Well-1     ++   1       Field     +
+ --------------------------------+---------------------++---------------------+
+ Well parameters                 +                     ++                     +
+   Well Type                     +  Mob Wtd Water Inj  ++                     +
+   Status                        +          BHP        ++                     +
+   On-time fraction              +          1.0        ++                     +
+   Cumulative Open days          +          2          ++          2          +
+ Well Pressures                  +                     ++                     +
+   Bottom Hole     psia          +         2000        ++                     +
+   Grid Block      psia          +        1998.9       ++                     +
+   Drawdown        psia          +        1.1235       ++                     +
+   Ref Layer Head  psia          +          0          ++                     +
+   Tubing Head     psia          +                     ++                     +
+ Mobility Weighted Pressures     +                     ++                     +
+   P-P(0)          psia          +        998.88       ++                     +
+   Block Pressure  psia          +        1998.9       ++                     +
+   Datum Pressure  psia          +        1998.9       ++                     +
+ Inst Surface Injection Rates    +                     ++                     +
+   Oil             STB/day       +          0          ++          0          +
+   Water           STB/day       +        1759.1       ++        1759.1       +
+   Gas             MSCF/day      +          0          ++          0          +
+ Surface cumulative injection    +                     ++                     +
+   Well Open Time  days          +          2          ++          2          +
+   Oil             MSTB          +          0          ++          0          +
+   Water           MSTB          +        3.7425       ++        3.7425       +
+   Gas             MMSCF         +          0          ++          0          +
+ ===================================================================================================================================
+ ===================================================================================================================================
+1
+ DATE 1901 1  3.00000
+
+ ===================== SUMMARY (from subroutine: INWELL) ======================
+  Reading of well data is complete.
+  Simulation will stop if there were error messages.
+     2 Warning messages.    0 Error messages.
+ ==============================================================================
+
+
+                            I M E X   T I M E   S T E P   S U M M A R Y                                                             
+ =================================================================================================                                  
+   Time Step          Time          Total Production      Total Injection  Total Max. Max. Change                                   
+ -------------- ---------------- ----------------------- -----------------  PV   Mat. ------------                                  
+              C                    Gas     Water    WGR    Gas     Water   Avg.  bal. Satur. Pres.                                  
+      Size    U                                    STB/                    Pres. err. DSMAX  DPMAX                                  
+ No.  Days IT T Days   yy:mm:dd   MCF/D    STB/D   MSCF   MCF/D    STB/D   psia   %          psia                                   
+ ---- ---- -- - ----- ---------- -------- -------- ----- -------- -------- ----- ---- ------ -----                                  
+   3w 1.00 1  0 3.000 1901:01:04                                  1587.628  1075 e-7w  e-11g  76.1                                  
+1
+ ***********************************************************************************************************************************
+ TIME: 3.0000 days                              I M E X   S E C T O R   S U M M A R Y                             DATE: 1901:01:04  
+ ***********************************************************************************************************************************
+ ===================================================================================================================================
+ 
+                                SECTOR-0                                                                                            
+                                Entire                                                                                              
+                                 Field                                                                                              
+   Total Pore Volume.  M rbbl    71250                                                                                              
+   HC. Pore Volume     M rbbl  -.07125                                                                                              
+ Fluids in Place
+   Total Gas          MM SCF   -244e-6                                                                                              
+   Free Gas           MM SCF                                                                                                        
+   Water               M STB     71256                                                                                              
+   Reservoir Gas       M rbbl                                                                                                       
+   Reservoir Water     M rbbl    71250                                                                                              
+ Average Pressure 
+   Total Pore Volume  psia      1074.8                                                                                              
+   HC. Pore Volume    psia      -12175                                                                                              
+ Average P/Z 
+   Total Pore Volume  psia      1355.2                                                                                              
+   HC. Pore Volume    psia      -15352                                                                                              
+ Average Saturation %
+   Gas                                                                                                                              
+   Water                        100.00                                                                                              
+ Percentage Recovery 
+   Total Gas                                                                                                                        
+   Water                       -.00748                                                                                              
+ Cumulative Injection 
+   Gas             MM SCF                                                                                                           
+   Water            M STB       5.3301                                                                                              
+ Cumulative Production 
+   Gas             MM SCF                                                                                                           
+   Water            M STB                                                                                                           
+ Injection Rate 
+   Gas             MM SCF/days                                                                                                      
+   Water            M STB/days  1.5876                                                                                              
+ Production Rate 
+   Gas             MM SCF/days                                                                                                      
+   Water            M STB/days                                                                                                      
+ 
+
+
+
+ 
+ ***********************************************************************************************************************************
+ TIME:  3.0000 days                              I M E X   F I E L D  S U M M A R Y                               DATE: 1901:JAN:04 
+ ***********************************************************************************************************************************
+ ===================================================================================================================================
+                                 +                     ++                     +
+                                 +         WELL        ++   TOTAL FOR GROUP   +
+                                 +---------------------++---------------------+
+                                 + No.       Name      ++ No.       Name      +
+                                 +---- ----------------++---- ----------------+
+                                 +   1      Well-1     ++   1       Field     +
+ --------------------------------+---------------------++---------------------+
+ Well parameters                 +                     ++                     +
+   Well Type                     +  Mob Wtd Water Inj  ++                     +
+   Status                        +          BHP        ++                     +
+   On-time fraction              +          1.0        ++                     +
+   Cumulative Open days          +          3          ++          3          +
+ Well Pressures                  +                     ++                     +
+   Bottom Hole     psia          +         2000        ++                     +
+   Grid Block      psia          +         1999        ++                     +
+   Drawdown        psia          +        1.014        ++                     +
+   Ref Layer Head  psia          +          0          ++                     +
+   Tubing Head     psia          +                     ++                     +
+ Mobility Weighted Pressures     +                     ++                     +
+   P-P(0)          psia          +        998.99       ++                     +
+   Block Pressure  psia          +         1999        ++                     +
+   Datum Pressure  psia          +         1999        ++                     +
+ Inst Surface Injection Rates    +                     ++                     +
+   Oil             STB/day       +          0          ++          0          +
+   Water           STB/day       +        1587.6       ++        1587.6       +
+   Gas             MSCF/day      +          0          ++          0          +
+ Surface cumulative injection    +                     ++                     +
+   Well Open Time  days          +          3          ++          3          +
+   Oil             MSTB          +          0          ++          0          +
+   Water           MSTB          +        5.3301       ++        5.3301       +
+   Gas             MMSCF         +          0          ++          0          +
+ ===================================================================================================================================
+ ===================================================================================================================================
+1
+ DATE 1901 1  4.00000
+ RESULTS RELPERMCORR NUMROCKTYPE 1
+ RESULTS RELPERMCORR CORRVALS 0 0 0 0 0 0 0 0
+ RESULTS RELPERMCORR CORRVALS 1 1 1 1 1 1 1 1
+ RESULTS RELPERMCORR CORRVALS_HONARPOUR -99999 -99999 -99999 -99999 -99999 -99999 -99999 -99999
+ RESULTS RELPERMCORR NOSWC false
+ RESULTS RELPERMCORR CALINDEX  0
+ RESULTS RELPERMCORR STOP
+ 
+ RESULTS SPEC 'Implicit flag'
+ RESULTS SPEC SPECNOTCALCVAL -99999
+ RESULTS SPEC REGION 'Layer 1 - Whole layer'
+ RESULTS SPEC REGIONTYPE 'REGION_LAYER'
+ RESULTS SPEC LAYERNUMB 1
+ RESULTS SPEC PORTYPE 1
+ RESULTS SPEC CON 1
+ RESULTS SPEC SPECKEEPMOD 'YES'
+ RESULTS SPEC STOP
+ 
+ 
+ RESULTS SPEC 'Porosity'
+ RESULTS SPEC SPECNOTCALCVAL -99999
+ RESULTS SPEC REGION 'Layer 1 - Whole layer'
+ RESULTS SPEC REGIONTYPE 'REGION_LAYER'
+ RESULTS SPEC LAYERNUMB 1
+ RESULTS SPEC PORTYPE 1
+ RESULTS SPEC CON 0.2
+ RESULTS SPEC SPECKEEPMOD 'YES'
+ RESULTS SPEC STOP
+ 
+ 
+ RESULTS SPEC 'Pressure'
+ RESULTS SPEC SPECNOTCALCVAL -99999
+ RESULTS SPEC REGION 'All Layers (Whole Grid)'
+ RESULTS SPEC REGIONTYPE 'REGION_WHOLEGRID'
+ RESULTS SPEC LAYERNUMB 0
+ RESULTS SPEC PORTYPE 1
+ RESULTS SPEC CON 1000
+ RESULTS SPEC SPECKEEPMOD 'YES'
+ RESULTS SPEC STOP
+ 
+ 
+ RESULTS SPEC 'Permeability I'
+ RESULTS SPEC SPECNOTCALCVAL -99999
+ RESULTS SPEC REGION 'All Layers (Whole Grid)'
+ RESULTS SPEC REGIONTYPE 'REGION_WHOLEGRID'
+ RESULTS SPEC LAYERNUMB 0
+ RESULTS SPEC PORTYPE 1
+ RESULTS SPEC CON 50
+ RESULTS SPEC SPECKEEPMOD 'YES'
+ RESULTS SPEC STOP
+ 
+ 
+ RESULTS SPEC 'Permeability J'
+ RESULTS SPEC SPECNOTCALCVAL -99999
+ RESULTS SPEC REGION 'All Layers (Whole Grid)'
+ RESULTS SPEC REGIONTYPE 'REGION_WHOLEGRID'
+ RESULTS SPEC LAYERNUMB 0
+ RESULTS SPEC PORTYPE 1
+ RESULTS SPEC EQUALSI 0 1
+ RESULTS SPEC SPECKEEPMOD 'YES'
+ RESULTS SPEC STOP
+ 
+ 
+ RESULTS SPEC 'Permeability K'
+ RESULTS SPEC SPECNOTCALCVAL -99999
+ RESULTS SPEC REGION 'All Layers (Whole Grid)'
+ RESULTS SPEC REGIONTYPE 'REGION_WHOLEGRID'
+ RESULTS SPEC LAYERNUMB 0
+ RESULTS SPEC PORTYPE 1
+ RESULTS SPEC EQUALSI 0 1
+ RESULTS SPEC SPECKEEPMOD 'YES'
+ RESULTS SPEC STOP
+ 
+ 
+ RESULTS SPEC 'PVT Type'
+ RESULTS SPEC SPECNOTCALCVAL -99999
+ RESULTS SPEC REGION 'All Layers (Whole Grid)'
+ RESULTS SPEC REGIONTYPE 'REGION_WHOLEGRID'
+ RESULTS SPEC LAYERNUMB 0
+ RESULTS SPEC PORTYPE 1
+ RESULTS SPEC CON 1
+ RESULTS SPEC SPECKEEPMOD 'YES'
+ RESULTS SPEC STOP
+ 
+ 
+ RESULTS SPEC 'Oil Saturation'
+ RESULTS SPEC SPECNOTCALCVAL -99999
+ RESULTS SPEC REGION 'Layer 1 - Whole layer'
+ RESULTS SPEC REGIONTYPE 'REGION_LAYER'
+ RESULTS SPEC LAYERNUMB 1
+ RESULTS SPEC PORTYPE 1
+ RESULTS SPEC CON 0
+ RESULTS SPEC SPECKEEPMOD 'YES'
+ RESULTS SPEC STOP
+ 
+ 
+ RESULTS SPEC 'Bubble Point Pressure'
+ RESULTS SPEC SPECNOTCALCVAL -99999
+ RESULTS SPEC REGION 'PVT Type 1'
+ RESULTS SPEC REGIONTYPE 'REGION_TABLE'
+ RESULTS SPEC LAYERNUMB 1
+ RESULTS SPEC PORTYPE 1
+ RESULTS SPEC CON 0
+ RESULTS SPEC SPECKEEPMOD 'YES'
+ RESULTS SPEC STOP
+ 
+ 
+ RESULTS SPEC 'Grid Top'
+ RESULTS SPEC SPECNOTCALCVAL -99999
+ RESULTS SPEC REGION 'Layer 1 - Whole layer'
+ RESULTS SPEC REGIONTYPE 'REGION_LAYER'
+ RESULTS SPEC LAYERNUMB 1
+ RESULTS SPEC PORTYPE 1
+ RESULTS SPEC CON 1000
+ RESULTS SPEC SPECKEEPMOD 'YES'
+ RESULTS SPEC STOP
+ 
+ 
+ RESULTS SPEC 'Water Saturation'
+ RESULTS SPEC SPECNOTCALCVAL -99999
+ RESULTS SPEC REGION 'Layer 1 - Whole layer'
+ RESULTS SPEC REGIONTYPE 'REGION_LAYER'
+ RESULTS SPEC LAYERNUMB 1
+ RESULTS SPEC PORTYPE 1
+ RESULTS SPEC CON 1
+ RESULTS SPEC SPECKEEPMOD 'YES'
+ RESULTS SPEC STOP
+ 
+ 
+ RESULTS SPEC 'Grid Thickness'
+ RESULTS SPEC SPECNOTCALCVAL -99999
+ RESULTS SPEC REGION 'Layer 1 - Whole layer'
+ RESULTS SPEC REGIONTYPE 'REGION_LAYER'
+ RESULTS SPEC LAYERNUMB 1
+ RESULTS SPEC PORTYPE 1
+ RESULTS SPEC CON 80
+ RESULTS SPEC SPECKEEPMOD 'YES'
+ RESULTS SPEC STOP
+ 
+
+ ===================== SUMMARY (from subroutine: TSIO)   ======================
+  Simulation run terminated. Stopping time reached.
+    
+     2 Warning messages.    0 Error messages.
+ ==============================================================================
+
+                                                                                                                                    
+ ***********************************************                                                                                    
+ A V A I L A B L E    R E S T A R T    T I M E S                                                                                    
+ ***********************************************                                                                                    
+      time        time             date                                                                                             
+      step                      yyyy:mm:dd                                                                                          
+     ======  =============     ============                                                                                         
+ No Restart information available
+
+       Field Total                             Fluid
+                             Oil       Gas       Water    Solvent   Polymer 
+                            -------   -------   -------   -------   -------
+                            (MSTB)    (MMSCF)   (MSTB)    (MMSCF)   (MLB) 
+  Cumulative Production       NA         0         0        NA        NA   
+  Cumulative Injection        NA         0       5.3301     NA        NA   
+  Cumulative Gas Lift         NA         0        NA        NA        NA   
+  Cumulative Water Influx     NA        NA         0        NA        NA   
+  Current Fluids In Place     NA      -244e-6     71256     NA        NA   
+  Production Rates            NA         0         0        NA        NA   
+  Injection Rates             NA         0       1.5876     NA        NA   
+
+  Timesteps:      3  Newton Cycles:        4  Cuts:      0  Solver Iterations:            4
+  Average Implicitness    : 1.000
+  Material Balances (wg  ): 1.000 1.000
+  Average Active Blocks:           5 Average Non-BHP Active Wells:     0
+  Total Blocks :           5 Total Wells :     1
+  Active Blocks:           5 Non-BHP Active Wells:     0
+  Total lstpro/lstpar calls:     3
+  Time at end of simulation:   3.00000     (days) 
+  Average reservoir pressure excluding water zone:          (psi)    
+  Total Number of Solver Failures:       0
+  Jacobian Domains      1
+  Linear Solver: Aimsol
+  Preconditioner Ordering     REDBLACK
+  Preconditioner Degree           1
+  KMP_AFFINITY: Default
+  OMP_SCHEDULE: Default
+  Max Impl Blocks:        5  %Impl:100.0%  (TS,CUT,NCYC): (    1, 0,  1 )
+  Max Solver Iterations (TS,CUT,NCYC):   1 (    1, 0,  1 )
+  Number of threads set           1
+  Number of total cpus            4
+  Memory Usage Peak:       20 MB on TS:    1  TS 1 Peak:       20 MB  Average:       20 MB  VM Size:        8 MB
+  Memory Usage Final Size:         21 MB
+  Host computer: PGE-AppD-VM12
+
+  End of Simulation: Normal Termination   
+
+  CPU Time:             0.09 seconds
+  Elapsed Time:         0.86 seconds
+
+  Date and Time of End of Run:  Oct 19, 2017  09:15:20
+
